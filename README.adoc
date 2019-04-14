@@ -1,0 +1,3 @@
+= Notes aboute k8s
+
+link:https://kubernetes.io/docs/home/[https://kubernetes.io/docs/home/]
