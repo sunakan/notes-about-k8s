@@ -1,0 +1,157 @@
+== What is Kubernetes?
+
+link:https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/[What is Kubernetes?]
+
+
+[quote, ' link:https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/[What is Kubernetes?]']
+____
+managing containerized workloads and services
+____
+
+* Notes
+** 動名詞
+** プロセス単位をサービスとして指している気がする(ngixなど)
+** コンテナ化されたプロセス群(=services)
+** ここで言うworkloadsは `コンテナを使ったサービスの提供方法` を指してそう
+* 意訳
+** コンテナを使った運用とサービスの管理
+
+---
+
+[quote, ' link:https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/[What is Kubernetes?]']
+____
+~ that facilitates both declarative configuration and automation
+____
+
+
+[options="autowidth"]
+|===
+| `facilititate` | 容易に、楽にする
+| `declarative`  | 平叙の +
+(ありのままに述べること(平叙文：「彼は男だ」、疑問文：「彼は男か？」))
+|===
+
+* Notes
+** ここでの `declarative configuration` は `〇〇 as code` を指してそう(e.g. XXX.ymlとか)
+* 意訳
+** 「自動化」と「設定as code」の両方を容易にする〇〇
+
+---
+
+[quote, ' link:https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/[What is Kubernetes?]']
+____
+It has a large, rapidly grwoing ecosystem.
+____
+
+* Notes
+** `ecosystem` は 業界や製品が連携して収益を得る様
+*** https://blog.kairosmarketing.net/marketing-strategy/ecosystem/[エコシステムとは？仕事でよく耳にするキーワードの解説]
+** `It` は `kubernetes` を指してる
+* 意訳
+** k8sは素早く大きくスケール可能なエコシステムを持つ
+
+---
+
+[quote, ' link:https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/[What is Kubernetes?]']
+____
+Kubernetes builds upon a decade and a half of experience that Google has with running production workloads at scale, combined with best-of-breed ideas and practices from the community.
+____
+
+[options="autowidth"]
+|===
+| `build upon ~` | ～に基づいてる
+| `decade` | 10年間
+| `prcatice` | 経験、慣例、知見
+| `combine A and B` | AとBを組み合わせる
+|===
+
+* 意訳
+** k8sはGoogleの大規模本番運用10年半の経験が詰まってる!!
+** その運用経験はコミュニティからの知見やアイディアもMixされてる
+
+---
+
+=== Why do I need Kubernetes and what can it do?
+
+* なぜ必要か?
+* 何ができるのか
+
+---
+
+[options="autowidth"]
+|===
+| `feature` | 特徴
+|===
+
+* Notes
+** `microservice`
+*** link:https://qiita.com/crossroad0201/items/23864b3b177fb1fce966[書籍「マイクロサービスアーキテクチャ」まとめ(前編)]
+** `portable cloud platform`
+*** `移行(AWSからGCEなど)しやすいクラウド基盤` と解釈
+
+---
+
+[quote, ' link:https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/[What is Kubernetes?]']
+____
+Kubernetes provides a container-centric management environment.
+____
+
+[options="autowidth"]
+|===
+| `provide` | 提供する
+|===
+
+* Notes
+** `container-centric`
+*** コンテナ中心
+* 意訳
+** k8sはコンテナ中心の管理環境を提供する
+
+---
+
+[quote, ' link:https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/[What is Kubernetes?]']
+____
+It orchestrates computing, networking, and storage infrastructure on behalf of user workloads.
+____
+
+[options="autowidth"]
+|===
+| `orchestrate` | 指揮する
+|===
+
+* Notes
+** `computing` はwebサービスでいうロジック部分だと思う
+** ネットワーキング構成(何を公開、何を隠蔽とか?)
+** ストレージ構成(画像はAWSのどこどこ、DBの種類・場所とか?)
+** オーケストレーションはこれらの考え方を指揮して綺麗にまとめることを指している
+** オーケストラのイメージでよいと思われる
+** そのまとめることに特化したツール=オーケストレーション・ツールの1つ=k8s
+* 意訳
+** k8sはロジック～インフラ運用を綺麗にまとめあげる
+
+---
+
+[quote, ' link:https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/[What is Kubernetes?]']
+____
+
+This provides much of the simplicity of Platform as a Service (PaaS) with the flexibility of Infrastructure as a Service (IaaS), and enables portability across infrastructure providers.
+____
+
+[options="autowidth"]
+|===
+| `simplicity` | 単純、簡素
+| `across` | ～を横切って、～を渡って
+| `provide A with B` | AにBを提供する
+| `enable` | 可能にする、許可する、容易にする
+| `portability` | 移植性
+|===
+
+* Notes
+** `provides PaaSのシンプルさ with IaaSのフレキシブルさ`
+** PaaS(例: Heroku、EC2、S3)
+** IaaS(例: AWS、Azure、GCP)
+* 意訳
+** PaaSのシンプルさとIaaSの柔軟性を提供しつつ、インフラプロバイダ間の移植を可能にする
+
+
+=== How is Kubernetes a platform?
